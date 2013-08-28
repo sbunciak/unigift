@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_descriptionItem" structureRef="String" />
+  <itemDefinition id="_contactItem" structureRef="String" />
+  <itemDefinition id="_onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_4-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_4-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_4-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_4-descriptionItem" structureRef="String" />
+  <itemDefinition id="_4-contactItem" structureRef="String" />
+  <itemDefinition id="_4-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_4-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_9-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_9-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_9-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_9-descriptionItem" structureRef="String" />
+  <itemDefinition id="_9-contactItem" structureRef="String" />
+  <itemDefinition id="_9-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_9-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_12-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_12-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_12-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_12-descriptionItem" structureRef="String" />
+  <itemDefinition id="_12-contactItem" structureRef="String" />
+  <itemDefinition id="_12-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_12-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_13-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_13-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_13-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_13-descriptionItem" structureRef="String" />
+  <itemDefinition id="_13-contactItem" structureRef="String" />
+  <itemDefinition id="_13-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_13-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_17-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_17-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_17-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_17-descriptionItem" structureRef="String" />
+  <itemDefinition id="_17-contactItem" structureRef="String" />
+  <itemDefinition id="_17-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_17-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_18-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_18-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_18-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_18-descriptionItem" structureRef="String" />
+  <itemDefinition id="_18-contactItem" structureRef="String" />
+  <itemDefinition id="_18-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_18-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_23-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_23-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_23-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_23-descriptionItem" structureRef="String" />
+  <itemDefinition id="_23-contactItem" structureRef="String" />
+  <itemDefinition id="_23-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_23-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_25-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_25-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_25-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_25-descriptionItem" structureRef="String" />
+  <itemDefinition id="_25-contactItem" structureRef="String" />
+  <itemDefinition id="_25-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_25-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_27-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_27-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_27-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_27-descriptionItem" structureRef="String" />
+  <itemDefinition id="_27-contactItem" structureRef="String" />
+  <itemDefinition id="_27-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_27-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_26-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_26-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_26-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_26-descriptionItem" structureRef="String" />
+  <itemDefinition id="_26-contactItem" structureRef="String" />
+  <itemDefinition id="_26-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_26-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_29-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_29-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_29-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_29-descriptionItem" structureRef="String" />
+  <itemDefinition id="_29-contactItem" structureRef="String" />
+  <itemDefinition id="_29-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_29-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_28-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_28-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_28-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_28-descriptionItem" structureRef="String" />
+  <itemDefinition id="_28-contactItem" structureRef="String" />
+  <itemDefinition id="_28-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_28-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_31-enoughInfoItem" structureRef="Boolean" />
+  <itemDefinition id="_31-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_31-inWarrantyItem" structureRef="Boolean" />
+  <itemDefinition id="_31-descriptionItem" structureRef="String" />
+  <itemDefinition id="_31-contactItem" structureRef="String" />
+  <itemDefinition id="_31-onStockItem" structureRef="Boolean" />
+  <itemDefinition id="_31-complaintItem" structureRef="cz.muni.fi.pv207.unigift.complaint.Complaint" />
+
+  <itemDefinition id="_17_MessageType" />
+  <message id="_17_Message" itemRef="_17_MessageType" />
+
+  <itemDefinition id="_29_MessageType" />
+  <message id="_29_Message" itemRef="_29_MessageType" />
+
+  <process processType="Private" isExecutable="true" id="unigift-complaints" name="Complaints" tns:packageName="defaultPackage" >
+
+    <!-- process variables -->
+    <property id="enoughInfo" itemSubjectRef="_enoughInfoItem"/>
+    <property id="product" itemSubjectRef="_productItem"/>
+    <property id="inWarranty" itemSubjectRef="_inWarrantyItem"/>
+    <property id="description" itemSubjectRef="_descriptionItem"/>
+    <property id="contact" itemSubjectRef="_contactItem"/>
+    <property id="onStock" itemSubjectRef="_onStockItem"/>
+    <property id="complaint" itemSubjectRef="_complaintItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_2" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <userTask id="_4" name="Check missing information" >
+      <ioSpecification>
+        <dataInput id="_4_complaintInput" name="complaint" />
+        <dataInput id="_4_TaskNameInput" name="TaskName" />
+        <dataInput id="_4_GroupIdInput" name="GroupId" />
+        <dataOutput id="_4_enoughInfoOutput" name="enoughInfo" />
+        <inputSet>
+          <dataInputRefs>_4_complaintInput</dataInputRefs>
+          <dataInputRefs>_4_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_4_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_4_enoughInfoOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>complaint</sourceRef>
+        <targetRef>_4_complaintInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Check info</from>
+          <to xsi:type="tFormalExpression">_4_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_4_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_4_enoughInfoOutput</sourceRef>
+        <targetRef>enoughInfo</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <exclusiveGateway id="_5" name="Enough information" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_8" name="Gateway" gatewayDirection="Diverging" />
+    <task id="_9" name="Offer customer new product" tns:taskName="Email" >
+      <ioSpecification>
+        <dataInput id="_9_BodyInput" name="Body" />
+        <dataInput id="_9_SubjectInput" name="Subject" />
+        <dataInput id="_9_ToInput" name="To" />
+        <dataInput id="_9_FromInput" name="From" />
+        <inputSet>
+          <dataInputRefs>_9_BodyInput</dataInputRefs>
+          <dataInputRefs>_9_SubjectInput</dataInputRefs>
+          <dataInputRefs>_9_ToInput</dataInputRefs>
+          <dataInputRefs>_9_FromInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_9_BodyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">We are offering you product replacement since product you are complaining about is in warranty.</from>
+          <to xsi:type="tFormalExpression">_9_BodyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_9_SubjectInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Product offer</from>
+          <to xsi:type="tFormalExpression">_9_SubjectInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_9_ToInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contact}</from>
+          <to xsi:type="tFormalExpression">_9_ToInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_9_FromInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">customer@unigift.cz</from>
+          <to xsi:type="tFormalExpression">_9_FromInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_10" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_12" name="Request physical evidence" tns:taskName="Email" >
+      <ioSpecification>
+        <dataInput id="_12_BodyInput" name="Body" />
+        <dataInput id="_12_SubjectInput" name="Subject" />
+        <dataInput id="_12_ToInput" name="To" />
+        <dataInput id="_12_FromInput" name="From" />
+        <inputSet>
+          <dataInputRefs>_12_BodyInput</dataInputRefs>
+          <dataInputRefs>_12_SubjectInput</dataInputRefs>
+          <dataInputRefs>_12_ToInput</dataInputRefs>
+          <dataInputRefs>_12_FromInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_12_BodyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">We are requesting physical evidence of accident you experienced which caused your troubles.</from>
+          <to xsi:type="tFormalExpression">_12_BodyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_12_SubjectInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Evidence request</from>
+          <to xsi:type="tFormalExpression">_12_SubjectInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_12_ToInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contact}</from>
+          <to xsi:type="tFormalExpression">_12_ToInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_12_FromInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">customer@unigift.cz</from>
+          <to xsi:type="tFormalExpression">_12_FromInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <manualTask id="_13" name="Obtain physical evidence" >
+    </manualTask>
+    <exclusiveGateway id="_15" name="Gateway" gatewayDirection="Diverging" />
+    <sendTask id="_17" name="Order product from supplier" messageRef="_17_Message" implementation="Other" >
+      <ioSpecification>
+        <dataInput id="_17_param" name="Message" />
+        <inputSet>
+          <dataInputRefs>_17_param</dataInputRefs>
+        </inputSet>
+        <outputSet/>
+      </ioSpecification>
+    </sendTask>
+    <exclusiveGateway id="_16" name="Gateway" gatewayDirection="Converging" />
+    <manualTask id="_18" name="Obtain product from supplier" >
+    </manualTask>
+    <endEvent id="_20" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_23" name="Appologize and offer money" tns:taskName="Email" >
+      <ioSpecification>
+        <dataInput id="_23_BodyInput" name="Body" />
+        <dataInput id="_23_SubjectInput" name="Subject" />
+        <dataInput id="_23_ToInput" name="To" />
+        <dataInput id="_23_FromInput" name="From" />
+        <inputSet>
+          <dataInputRefs>_23_BodyInput</dataInputRefs>
+          <dataInputRefs>_23_SubjectInput</dataInputRefs>
+          <dataInputRefs>_23_ToInput</dataInputRefs>
+          <dataInputRefs>_23_FromInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_23_BodyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">We are very sorry for the delay. Would you please accept money back?</from>
+          <to xsi:type="tFormalExpression">_23_BodyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_23_SubjectInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">appology</from>
+          <to xsi:type="tFormalExpression">_23_SubjectInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_23_ToInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contact}</from>
+          <to xsi:type="tFormalExpression">_23_ToInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_23_FromInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales@unigift.cz</from>
+          <to xsi:type="tFormalExpression">_23_FromInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_22" name="Signal" >
+      <signalEventDefinition signalRef="Timer"/>
+    </intermediateCatchEvent>
+    <userTask id="_25" name="Check the request reason" >
+      <ioSpecification>
+        <dataInput id="_25_complaintInput" name="complaint" />
+        <dataInput id="_25_TaskNameInput" name="TaskName" />
+        <dataInput id="_25_GroupIdInput" name="GroupId" />
+        <dataOutput id="_25_inWarrantyOutput" name="inWarranty" />
+        <inputSet>
+          <dataInputRefs>_25_complaintInput</dataInputRefs>
+          <dataInputRefs>_25_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_25_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_25_inWarrantyOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>complaint</sourceRef>
+        <targetRef>_25_complaintInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Check warranty</from>
+          <to xsi:type="tFormalExpression">_25_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_25_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_25_inWarrantyOutput</sourceRef>
+        <targetRef>inWarranty</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <exclusiveGateway id="_24" name="Gateway" gatewayDirection="Converging" />
+    <userTask id="_27" name="Obtain product complaint" >
+      <ioSpecification>
+        <dataInput id="_27_productInput" name="product" />
+        <dataInput id="_27_descriptionInput" name="description" />
+        <dataInput id="_27_contactInput" name="contact" />
+        <dataInput id="_27_CommentInput" name="Comment" />
+        <dataInput id="_27_TaskNameInput" name="TaskName" />
+        <dataInput id="_27_GroupIdInput" name="GroupId" />
+        <dataOutput id="_27_complaintOutput" name="complaint" />
+        <inputSet>
+          <dataInputRefs>_27_productInput</dataInputRefs>
+          <dataInputRefs>_27_descriptionInput</dataInputRefs>
+          <dataInputRefs>_27_contactInput</dataInputRefs>
+          <dataInputRefs>_27_CommentInput</dataInputRefs>
+          <dataInputRefs>_27_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_27_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_27_complaintOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>product</sourceRef>
+        <targetRef>_27_productInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>description</sourceRef>
+        <targetRef>_27_descriptionInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>contact</sourceRef>
+        <targetRef>_27_contactInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_CommentInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Please enter complaint information</from>
+          <to xsi:type="tFormalExpression">_27_CommentInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Obtain complaint</from>
+          <to xsi:type="tFormalExpression">_27_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_27_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_27_complaintOutput</sourceRef>
+        <targetRef>complaint</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <userTask id="_26" name="Check product on stock" >
+      <ioSpecification>
+        <dataInput id="_26_productInput" name="product" />
+        <dataInput id="_26_TaskNameInput" name="TaskName" />
+        <dataInput id="_26_GroupIdInput" name="GroupId" />
+        <dataOutput id="_26_onStockOutput" name="onStock" />
+        <inputSet>
+          <dataInputRefs>_26_productInput</dataInputRefs>
+          <dataInputRefs>_26_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_26_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_26_onStockOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>product</sourceRef>
+        <targetRef>_26_productInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_26_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Check stock</from>
+          <to xsi:type="tFormalExpression">_26_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_26_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_26_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_26_onStockOutput</sourceRef>
+        <targetRef>onStock</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <sendTask id="_29" name="Send product to customer" messageRef="_29_Message" implementation="Other" >
+      <ioSpecification>
+        <dataInput id="_29_param" name="Message" />
+        <inputSet>
+          <dataInputRefs>_29_param</dataInputRefs>
+        </inputSet>
+        <outputSet/>
+      </ioSpecification>
+    </sendTask>
+    <userTask id="_28" name="Collect all needed information" >
+      <ioSpecification>
+        <dataInput id="_28_complaintInput" name="complaint" />
+        <dataInput id="_28_TaskNameInput" name="TaskName" />
+        <dataInput id="_28_GroupIdInput" name="GroupId" />
+        <dataOutput id="_28_complaintOutput" name="complaint" />
+        <inputSet>
+          <dataInputRefs>_28_complaintInput</dataInputRefs>
+          <dataInputRefs>_28_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_28_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_28_complaintOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>complaint</sourceRef>
+        <targetRef>_28_complaintInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_28_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Collect info</from>
+          <to xsi:type="tFormalExpression">_28_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_28_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_28_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_28_complaintOutput</sourceRef>
+        <targetRef>complaint</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <userTask id="_31" name="Send money back" >
+      <ioSpecification>
+        <dataInput id="_31_TaskNameInput" name="TaskName" />
+        <dataInput id="_31_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_31_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_31_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_31_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Send money back</from>
+          <to xsi:type="tFormalExpression">_31_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_31_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">finances</from>
+          <to xsi:type="tFormalExpression">_31_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </userTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_31-_2" sourceRef="_31" targetRef="_2" />
+    <sequenceFlow id="_27-_4" sourceRef="_27" targetRef="_4" />
+    <sequenceFlow id="_4-_5" sourceRef="_4" targetRef="_5" />
+    <sequenceFlow id="_25-_8" sourceRef="_25" targetRef="_8" />
+    <sequenceFlow id="_8-_9" sourceRef="_8" targetRef="_9" name="reasonable" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return inWarranty == true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_9-_10" sourceRef="_9" targetRef="_10" />
+    <sequenceFlow id="_8-_12" sourceRef="_8" targetRef="_12" name="not reasonable" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return inWarranty == false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_12-_13" sourceRef="_12" targetRef="_13" />
+    <sequenceFlow id="_26-_15" sourceRef="_26" targetRef="_15" />
+    <sequenceFlow id="_15-_17" sourceRef="_15" targetRef="_17" name="not on stock" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return onStock == false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_18-_16" sourceRef="_18" targetRef="_16" />
+    <sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16" name="on stock" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return onStock == true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_17-_18" sourceRef="_17" targetRef="_18" />
+    <sequenceFlow id="_29-_20" sourceRef="_29" targetRef="_20" />
+    <sequenceFlow id="_22-_23" sourceRef="_22" targetRef="_23" />
+    <sequenceFlow id="_24-_25" sourceRef="_24" targetRef="_25" />
+    <sequenceFlow id="_5-_24" sourceRef="_5" targetRef="_24" name="yes" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return enoughInfo == true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_28-_24" sourceRef="_28" targetRef="_24" />
+    <sequenceFlow id="_1-_27" sourceRef="_1" targetRef="_27" />
+    <sequenceFlow id="_13-_26" sourceRef="_13" targetRef="_26" />
+    <sequenceFlow id="_16-_29" sourceRef="_16" targetRef="_29" />
+    <sequenceFlow id="_5-_28" sourceRef="_5" targetRef="_28" name="no" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return enoughInfo == false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_23-_31" sourceRef="_23" targetRef="_31" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="unigift-complaints" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="16" y="66" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="1920" y="12" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="228" y="66" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="360" y="66" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="786" y="66" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="867" y="16" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="1025" y="16" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="867" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="999" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="1263" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="1344" y="46" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="1608" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="1476" y="46" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="1821" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="1656" y="12" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_22" >
+        <dc:Bounds x="1576" y="12" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_25" >
+        <dc:Bounds x="659" y="67" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_24" >
+        <dc:Bounds x="573" y="66" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_27" >
+        <dc:Bounds x="102" y="66" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_26" >
+        <dc:Bounds x="1128" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_29" >
+        <dc:Bounds x="1693" y="95" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_28" >
+        <dc:Bounds x="438" y="18" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_31" >
+        <dc:Bounds x="1788" y="12" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_31-_2" >
+        <di:waypoint x="1838" y="36" />
+        <di:waypoint x="1944" y="36" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_27-_4" >
+        <di:waypoint x="152" y="90" />
+        <di:waypoint x="278" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_5" >
+        <di:waypoint x="278" y="90" />
+        <di:waypoint x="384" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_25-_8" >
+        <di:waypoint x="709" y="91" />
+        <di:waypoint x="810" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_9" >
+        <di:waypoint x="810" y="90" />
+        <di:waypoint x="917" y="40" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_10" >
+        <di:waypoint x="917" y="40" />
+        <di:waypoint x="1049" y="40" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_12" >
+        <di:waypoint x="810" y="90" />
+        <di:waypoint x="917" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_13" >
+        <di:waypoint x="917" y="120" />
+        <di:waypoint x="1049" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_26-_15" >
+        <di:waypoint x="1178" y="120" />
+        <di:waypoint x="1287" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_17" >
+        <di:waypoint x="1287" y="120" />
+        <di:waypoint x="1394" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_18-_16" >
+        <di:waypoint x="1526" y="70" />
+        <di:waypoint x="1632" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_16" >
+        <di:waypoint x="1287" y="120" />
+        <di:waypoint x="1632" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_18" >
+        <di:waypoint x="1394" y="70" />
+        <di:waypoint x="1526" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_29-_20" >
+        <di:waypoint x="1743" y="119" />
+        <di:waypoint x="1845" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_22-_23" >
+        <di:waypoint x="1600" y="36" />
+        <di:waypoint x="1706" y="36" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_24-_25" >
+        <di:waypoint x="597" y="90" />
+        <di:waypoint x="709" y="91" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_24" >
+        <di:waypoint x="384" y="90" />
+        <di:waypoint x="597" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_28-_24" >
+        <di:waypoint x="488" y="42" />
+        <di:waypoint x="597" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_27" >
+        <di:waypoint x="40" y="90" />
+        <di:waypoint x="152" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_26" >
+        <di:waypoint x="1049" y="120" />
+        <di:waypoint x="1178" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16-_29" >
+        <di:waypoint x="1632" y="120" />
+        <di:waypoint x="1743" y="119" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_28" >
+        <di:waypoint x="384" y="90" />
+        <di:waypoint x="488" y="42" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_31" >
+        <di:waypoint x="1706" y="36" />
+        <di:waypoint x="1838" y="36" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

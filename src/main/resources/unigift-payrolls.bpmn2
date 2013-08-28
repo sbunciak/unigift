@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_payItem" structureRef="Integer" />
+  <itemDefinition id="_hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_hoursItem" structureRef="Integer" />
+  <itemDefinition id="_idItem" structureRef="Integer" />
+  <itemDefinition id="_nameItem" structureRef="String" />
+  <itemDefinition id="_payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_3-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_3-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_3-payItem" structureRef="Integer" />
+  <itemDefinition id="_3-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_3-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_3-idItem" structureRef="Integer" />
+  <itemDefinition id="_3-nameItem" structureRef="String" />
+  <itemDefinition id="_3-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_3-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_7-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_7-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_7-payItem" structureRef="Integer" />
+  <itemDefinition id="_7-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_7-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_7-idItem" structureRef="Integer" />
+  <itemDefinition id="_7-nameItem" structureRef="String" />
+  <itemDefinition id="_7-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_7-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_8-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_8-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_8-payItem" structureRef="Integer" />
+  <itemDefinition id="_8-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_8-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_8-idItem" structureRef="Integer" />
+  <itemDefinition id="_8-nameItem" structureRef="String" />
+  <itemDefinition id="_8-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_8-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_11-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_11-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_11-payItem" structureRef="Integer" />
+  <itemDefinition id="_11-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_11-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_11-idItem" structureRef="Integer" />
+  <itemDefinition id="_11-nameItem" structureRef="String" />
+  <itemDefinition id="_11-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_11-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_12-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_12-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_12-payItem" structureRef="Integer" />
+  <itemDefinition id="_12-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_12-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_12-idItem" structureRef="Integer" />
+  <itemDefinition id="_12-nameItem" structureRef="String" />
+  <itemDefinition id="_12-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_12-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_15-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_15-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_15-payItem" structureRef="Integer" />
+  <itemDefinition id="_15-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_15-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_15-idItem" structureRef="Integer" />
+  <itemDefinition id="_15-nameItem" structureRef="String" />
+  <itemDefinition id="_15-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_15-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_19-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_19-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_19-payItem" structureRef="Integer" />
+  <itemDefinition id="_19-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_19-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_19-idItem" structureRef="Integer" />
+  <itemDefinition id="_19-nameItem" structureRef="String" />
+  <itemDefinition id="_19-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_19-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_21-payrollItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <itemDefinition id="_21-employeeItem" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <itemDefinition id="_21-payItem" structureRef="Integer" />
+  <itemDefinition id="_21-hourPayItem" structureRef="Integer" />
+  <itemDefinition id="_21-hoursItem" structureRef="Integer" />
+  <itemDefinition id="_21-idItem" structureRef="Integer" />
+  <itemDefinition id="_21-nameItem" structureRef="String" />
+  <itemDefinition id="_21-payInCashItem" structureRef="Boolean" />
+  <itemDefinition id="_21-employeeExistItem" structureRef="Boolean" />
+
+  <itemDefinition id="_7_InMessageType" structureRef="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+  <message id="_7_InMessage" itemRef="_7_InMessageType" />
+  <interface id="_7_ServiceInterface" name="cz.muni.fi.pv207.unigift.payrolls.PayrollService">
+    <operation id="_7_ServiceOperation" name="addEmployee">
+      <inMessageRef>_7_InMessage</inMessageRef>
+    </operation>
+  </interface>
+
+  <itemDefinition id="_13-5_InMessageType" structureRef="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+  <message id="_13-5_InMessage" itemRef="_13-5_InMessageType" />
+  <interface id="_13-5_ServiceInterface" name="cz.muni.fi.pv207.unigift.payrolls.PayrollService">
+    <operation id="_13-5_ServiceOperation" name="pay">
+      <inMessageRef>_13-5_InMessage</inMessageRef>
+    </operation>
+  </interface>
+
+  <process processType="Private" isExecutable="true" id="unigift-payrolls" name="Payrolls" tns:packageName="defaultPackage" >
+
+    <extensionElements>
+     <tns:import name="cz.muni.fi.pv207.unigift.payrolls.Employee" />
+     <tns:import name="cz.muni.fi.pv207.unigift.payrolls.Payroll" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="payroll" itemSubjectRef="_payrollItem"/>
+    <property id="employee" itemSubjectRef="_employeeItem"/>
+    <property id="pay" itemSubjectRef="_payItem"/>
+    <property id="hourPay" itemSubjectRef="_hourPayItem"/>
+    <property id="hours" itemSubjectRef="_hoursItem"/>
+    <property id="id" itemSubjectRef="_idItem"/>
+    <property id="name" itemSubjectRef="_nameItem"/>
+    <property id="payInCash" itemSubjectRef="_payInCashItem"/>
+    <property id="employeeExist" itemSubjectRef="_employeeExistItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_2" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <userTask id="_3" name="Create new payroll" >
+      <ioSpecification>
+        <dataInput id="_3_TaskNameInput" name="TaskName" />
+        <dataInput id="_3_GroupIdInput" name="GroupId" />
+        <dataOutput id="_3_employeeExistOutput" name="employeeExist" />
+        <inputSet>
+          <dataInputRefs>_3_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_3_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_3_employeeExistOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_3_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Create payroll</from>
+          <to xsi:type="tFormalExpression">_3_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">finances</from>
+          <to xsi:type="tFormalExpression">_3_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_employeeExistOutput</sourceRef>
+        <targetRef>employeeExist</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <exclusiveGateway id="_4" name="Is employee already in system" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_5" name="Gateway" gatewayDirection="Converging" />
+    <serviceTask id="_7" name="Create new employee in system" operationRef="_7_ServiceOperation" implementation="Other" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("employee",new Employee(name, id, payInCash));</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_7_param" name="Parameter" />
+        <dataOutput id="_7_result" name="Result" />
+        <inputSet>
+          <dataInputRefs>_7_param</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_7_result</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>employee</sourceRef>
+        <targetRef>_7_param</targetRef>
+      </dataInputAssociation>
+    </serviceTask>
+    <userTask id="_8" name="Assign employee to the payroll" >
+      <ioSpecification>
+        <dataInput id="_8_employeeInput" name="employee" />
+        <dataInput id="_8_TaskNameInput" name="TaskName" />
+        <dataInput id="_8_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_8_employeeInput</dataInputRefs>
+          <dataInputRefs>_8_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_8_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>employee</sourceRef>
+        <targetRef>_8_employeeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Assign employee</from>
+          <to xsi:type="tFormalExpression">_8_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">finances</from>
+          <to xsi:type="tFormalExpression">_8_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </userTask>
+    <userTask id="_11" name="Request CFO validation" >
+      <ioSpecification>
+        <dataInput id="_11_hoursInput" name="hours" />
+        <dataInput id="_11_payInput" name="pay" />
+        <dataInput id="_11_employeeInput" name="employee" />
+        <dataInput id="_11_hourPayInput" name="hourPay" />
+        <dataInput id="_11_TaskNameInput" name="TaskName" />
+        <dataInput id="_11_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_11_hoursInput</dataInputRefs>
+          <dataInputRefs>_11_payInput</dataInputRefs>
+          <dataInputRefs>_11_employeeInput</dataInputRefs>
+          <dataInputRefs>_11_hourPayInput</dataInputRefs>
+          <dataInputRefs>_11_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_11_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>hours</sourceRef>
+        <targetRef>_11_hoursInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>pay</sourceRef>
+        <targetRef>_11_payInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>employee</sourceRef>
+        <targetRef>_11_employeeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>hourPay</sourceRef>
+        <targetRef>_11_hourPayInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_11_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Request CFO Validation</from>
+          <to xsi:type="tFormalExpression">_11_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_11_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">finances</from>
+          <to xsi:type="tFormalExpression">_11_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </userTask>
+    <userTask id="_12" name="Generate payroll" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("payroll", new Payroll(hours,hourPay,pay,employee));</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_12_hoursInput" name="hours" />
+        <dataInput id="_12_payInput" name="pay" />
+        <dataInput id="_12_employeeInput" name="employee" />
+        <dataInput id="_12_hourPayInput" name="hourPay" />
+        <dataInput id="_12_TaskNameInput" name="TaskName" />
+        <dataInput id="_12_GroupIdInput" name="GroupId" />
+        <dataOutput id="_12_payrollOutput" name="payroll" />
+        <inputSet>
+          <dataInputRefs>_12_hoursInput</dataInputRefs>
+          <dataInputRefs>_12_payInput</dataInputRefs>
+          <dataInputRefs>_12_employeeInput</dataInputRefs>
+          <dataInputRefs>_12_hourPayInput</dataInputRefs>
+          <dataInputRefs>_12_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_12_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_12_payrollOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>hours</sourceRef>
+        <targetRef>_12_hoursInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>pay</sourceRef>
+        <targetRef>_12_payInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>employee</sourceRef>
+        <targetRef>_12_employeeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>hourPay</sourceRef>
+        <targetRef>_12_hourPayInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_12_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Generate payroll</from>
+          <to xsi:type="tFormalExpression">_12_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_12_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">finances</from>
+          <to xsi:type="tFormalExpression">_12_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_12_payrollOutput</sourceRef>
+        <targetRef>payroll</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <subProcess id="_13" name="Pay the payroll"  >
+    <!-- nodes -->
+    <startEvent id="_13-1" name="Start" />
+    <endEvent id="_13-2" name="End" />
+    <exclusiveGateway id="_13-3" name="Payment method" gatewayDirection="Diverging" />
+    <manualTask id="_13-4" name="Pay in cash" >
+    </manualTask>
+    <serviceTask id="_13-5" name="Pay eletronically" operationRef="_13-5_ServiceOperation" implementation="Other" >
+      <ioSpecification>
+        <dataInput id="_13-5_param" name="Parameter" />
+        <dataOutput id="_13-5_result" name="Result" />
+        <inputSet>
+          <dataInputRefs>_13-5_param</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_13-5_result</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>payroll</sourceRef>
+        <targetRef>_13-5_param</targetRef>
+      </dataInputAssociation>
+    </serviceTask>
+    <exclusiveGateway id="_13-6" name="Gateway" gatewayDirection="Converging" />
+    <!-- connections -->
+    <sequenceFlow id="_13-6-_13-2" sourceRef="_13-6" targetRef="_13-2" />
+    <sequenceFlow id="_13-1-_13-3" sourceRef="_13-1" targetRef="_13-3" />
+    <sequenceFlow id="_13-3-_13-4" sourceRef="_13-3" targetRef="_13-4" name="cash" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return payInCash == true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_13-3-_13-5" sourceRef="_13-3" targetRef="_13-5" name="electronically" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return payInCash == false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_13-4-_13-6" sourceRef="_13-4" targetRef="_13-6" />
+    <sequenceFlow id="_13-5-_13-6" sourceRef="_13-5" targetRef="_13-6" />
+    </subProcess>
+    <intermediateCatchEvent id="_14" name="Signal" >
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <task id="_15" name="Inform CFO" tns:taskName="Email" >
+      <ioSpecification>
+        <dataInput id="_15_BodyInput" name="Body" />
+        <dataInput id="_15_SubjectInput" name="Subject" />
+        <dataInput id="_15_ToInput" name="To" />
+        <dataInput id="_15_FromInput" name="From" />
+        <inputSet>
+          <dataInputRefs>_15_BodyInput</dataInputRefs>
+          <dataInputRefs>_15_SubjectInput</dataInputRefs>
+          <dataInputRefs>_15_ToInput</dataInputRefs>
+          <dataInputRefs>_15_FromInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_15_BodyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Informing CFO about error during payment of employee #{employee.name}</from>
+          <to xsi:type="tFormalExpression">_15_BodyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_15_SubjectInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_15_SubjectInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_15_ToInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">cfo@unigift.cz</from>
+          <to xsi:type="tFormalExpression">_15_ToInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_15_FromInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">admin@unigift.cz</from>
+          <to xsi:type="tFormalExpression">_15_FromInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_16" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <userTask id="_19" name="Add working hours" >
+      <ioSpecification>
+        <dataInput id="_19_employeeInput" name="employee" />
+        <dataInput id="_19_TaskNameInput" name="TaskName" />
+        <dataInput id="_19_GroupIdInput" name="GroupId" />
+        <dataOutput id="_19_hoursOutput" name="hours" />
+        <dataOutput id="_19_hourPayOutput" name="hourPay" />
+        <inputSet>
+          <dataInputRefs>_19_employeeInput</dataInputRefs>
+          <dataInputRefs>_19_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_19_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_19_hoursOutput</dataOutputRefs>
+          <dataOutputRefs>_19_hourPayOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>employee</sourceRef>
+        <targetRef>_19_employeeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_19_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Add working hours</from>
+          <to xsi:type="tFormalExpression">_19_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_19_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">finances</from>
+          <to xsi:type="tFormalExpression">_19_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_19_hoursOutput</sourceRef>
+        <targetRef>hours</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_19_hourPayOutput</sourceRef>
+        <targetRef>hourPay</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <scriptTask id="_18" name="Calculate salary" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("pay", hours * hourPay);</script>
+    </scriptTask>
+    <userTask id="_21" name="Add personal data" >
+      <ioSpecification>
+        <dataInput id="_21_TaskNameInput" name="TaskName" />
+        <dataInput id="_21_GroupIdInput" name="GroupId" />
+        <dataOutput id="_21_idOutput" name="id" />
+        <dataOutput id="_21_payInCashOutput" name="payInCash" />
+        <dataOutput id="_21_nameOutput" name="name" />
+        <inputSet>
+          <dataInputRefs>_21_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_21_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_21_idOutput</dataOutputRefs>
+          <dataOutputRefs>_21_payInCashOutput</dataOutputRefs>
+          <dataOutputRefs>_21_nameOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_21_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Add personal data</from>
+          <to xsi:type="tFormalExpression">_21_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_21_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">employee</from>
+          <to xsi:type="tFormalExpression">_21_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_21_idOutput</sourceRef>
+        <targetRef>id</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_21_payInCashOutput</sourceRef>
+        <targetRef>payInCash</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_21_nameOutput</sourceRef>
+        <targetRef>name</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_13-_2" sourceRef="_13" targetRef="_2" />
+    <sequenceFlow id="_1-_3" sourceRef="_1" targetRef="_3" />
+    <sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4" />
+    <sequenceFlow id="_4-_5" sourceRef="_4" targetRef="_5" name="yes" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return employeeExist == true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_7-_5" sourceRef="_7" targetRef="_5" />
+    <sequenceFlow id="_21-_7" sourceRef="_21" targetRef="_7" />
+    <sequenceFlow id="_5-_8" sourceRef="_5" targetRef="_8" />
+    <sequenceFlow id="_18-_11" sourceRef="_18" targetRef="_11" />
+    <sequenceFlow id="_11-_12" sourceRef="_11" targetRef="_12" />
+    <sequenceFlow id="_12-_13" sourceRef="_12" targetRef="_13" />
+    <sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15" />
+    <sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16" />
+    <sequenceFlow id="_8-_19" sourceRef="_8" targetRef="_19" />
+    <sequenceFlow id="_19-_18" sourceRef="_19" targetRef="_18" />
+    <sequenceFlow id="_4-_21" sourceRef="_4" targetRef="_21" name="no" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return employeeExist == false;</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="unigift-payrolls" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="16" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="1768" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="96" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="228" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="573" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="456" y="48" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="654" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="1030" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="1162" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="1294" y="16" width="442" height="208" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13-1" >
+        <dc:Bounds x="1306" y="92" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13-2" >
+        <dc:Bounds x="1683" y="90" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13-3" >
+        <dc:Bounds x="1392" y="93" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13-4" >
+        <dc:Bounds x="1487" y="44" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13-5" >
+        <dc:Bounds x="1491" y="144" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13-6" >
+        <dc:Bounds x="1613" y="91" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="1568" y="211" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="1644" y="228" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="1776" y="228" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="780" y="96" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="912" y="96" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_21" >
+        <dc:Bounds x="312" y="48" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_13-6-_13-2" >
+        <di:waypoint x="343" y="99" />
+        <di:waypoint x="413" y="98" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-1-_13-3" >
+        <di:waypoint x="36" y="100" />
+        <di:waypoint x="122" y="101" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-3-_13-4" >
+        <di:waypoint x="122" y="101" />
+        <di:waypoint x="243" y="52" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-3-_13-5" >
+        <di:waypoint x="122" y="101" />
+        <di:waypoint x="247" y="152" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-4-_13-6" >
+        <di:waypoint x="243" y="52" />
+        <di:waypoint x="343" y="99" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-5-_13-6" >
+        <di:waypoint x="247" y="152" />
+        <di:waypoint x="343" y="99" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_2" >
+        <di:waypoint x="1515" y="120" />
+        <di:waypoint x="1792" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_3" >
+        <di:waypoint x="40" y="120" />
+        <di:waypoint x="146" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_4" >
+        <di:waypoint x="146" y="120" />
+        <di:waypoint x="252" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_5" >
+        <di:waypoint x="252" y="120" />
+        <di:waypoint x="597" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_5" >
+        <di:waypoint x="506" y="72" />
+        <di:waypoint x="597" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_21-_7" >
+        <di:waypoint x="362" y="72" />
+        <di:waypoint x="506" y="72" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_8" >
+        <di:waypoint x="597" y="120" />
+        <di:waypoint x="704" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_18-_11" >
+        <di:waypoint x="952" y="120" />
+        <di:waypoint x="1080" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_12" >
+        <di:waypoint x="1080" y="120" />
+        <di:waypoint x="1212" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_13" >
+        <di:waypoint x="1212" y="120" />
+        <di:waypoint x="1515" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_15" >
+        <di:waypoint x="1592" y="235" />
+        <di:waypoint x="1694" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_16" >
+        <di:waypoint x="1694" y="252" />
+        <di:waypoint x="1800" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_19" >
+        <di:waypoint x="704" y="120" />
+        <di:waypoint x="830" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_18" >
+        <di:waypoint x="830" y="120" />
+        <di:waypoint x="952" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_21" >
+        <di:waypoint x="252" y="120" />
+        <di:waypoint x="362" y="72" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

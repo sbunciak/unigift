@@ -1,0 +1,14 @@
+<html>
+<body>
+<h2>Create payroll</h2>
+<hr>
+<#if task.descriptions[0]??>
+Description: ${task.descriptions[0].text}<BR/>
+</#if>
+<form action="complete" method="POST" enctype="multipart/form-data">
+employeeExist: <input type="text" name="employeeExist" /><BR/>
+<BR/>
+<input type="submit" name="outcome" value="Complete"/>
+</form>
+</body>
+</html>

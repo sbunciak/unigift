@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_needsItem" structureRef="String" />
+  <itemDefinition id="_summaryItem" structureRef="String" />
+  <itemDefinition id="_nameItem" structureRef="String" />
+  <itemDefinition id="_descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_7-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_7-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_7-needsItem" structureRef="String" />
+  <itemDefinition id="_7-summaryItem" structureRef="String" />
+  <itemDefinition id="_7-nameItem" structureRef="String" />
+  <itemDefinition id="_7-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_8-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_8-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_8-needsItem" structureRef="String" />
+  <itemDefinition id="_8-summaryItem" structureRef="String" />
+  <itemDefinition id="_8-nameItem" structureRef="String" />
+  <itemDefinition id="_8-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_9-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_9-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_9-needsItem" structureRef="String" />
+  <itemDefinition id="_9-summaryItem" structureRef="String" />
+  <itemDefinition id="_9-nameItem" structureRef="String" />
+  <itemDefinition id="_9-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_11-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_11-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_11-needsItem" structureRef="String" />
+  <itemDefinition id="_11-summaryItem" structureRef="String" />
+  <itemDefinition id="_11-nameItem" structureRef="String" />
+  <itemDefinition id="_11-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_12-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_12-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_12-needsItem" structureRef="String" />
+  <itemDefinition id="_12-summaryItem" structureRef="String" />
+  <itemDefinition id="_12-nameItem" structureRef="String" />
+  <itemDefinition id="_12-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_13-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_13-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_13-needsItem" structureRef="String" />
+  <itemDefinition id="_13-summaryItem" structureRef="String" />
+  <itemDefinition id="_13-nameItem" structureRef="String" />
+  <itemDefinition id="_13-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_14-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_14-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_14-needsItem" structureRef="String" />
+  <itemDefinition id="_14-summaryItem" structureRef="String" />
+  <itemDefinition id="_14-nameItem" structureRef="String" />
+  <itemDefinition id="_14-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_15-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_15-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_15-needsItem" structureRef="String" />
+  <itemDefinition id="_15-summaryItem" structureRef="String" />
+  <itemDefinition id="_15-nameItem" structureRef="String" />
+  <itemDefinition id="_15-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_18-productItem" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <itemDefinition id="_18-favouriteProductsItem" structureRef="String" />
+  <itemDefinition id="_18-needsItem" structureRef="String" />
+  <itemDefinition id="_18-summaryItem" structureRef="String" />
+  <itemDefinition id="_18-nameItem" structureRef="String" />
+  <itemDefinition id="_18-descriptionItem" structureRef="String" />
+
+  <itemDefinition id="_11_MessageType" />
+  <message id="_11_Message" itemRef="_11_MessageType" />
+
+  <itemDefinition id="_12_MessageType" />
+  <message id="_12_Message" itemRef="_12_MessageType" />
+
+  <itemDefinition id="_14_InMessageType" structureRef="cz.muni.fi.pv207.unigift.products.Product" />
+  <message id="_14_InMessage" itemRef="_14_InMessageType" />
+  <interface id="_14_ServiceInterface" name="cz.muni.fi.pv207.unigift.products.ProductService">
+    <operation id="_14_ServiceOperation" name="addProduct">
+      <inMessageRef>_14_InMessage</inMessageRef>
+    </operation>
+  </interface>
+
+  <process processType="Private" isExecutable="true" id="unigift-newproducts" name="Introduction of new products" tns:packageName="defaultPackage" >
+
+    <extensionElements>
+     <tns:import name="cz.muni.fi.pv207.unigift.products.Product" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="product" itemSubjectRef="_productItem"/>
+    <property id="favouriteProducts" itemSubjectRef="_favouriteProductsItem"/>
+    <property id="needs" itemSubjectRef="_needsItem"/>
+    <property id="summary" itemSubjectRef="_summaryItem"/>
+    <property id="name" itemSubjectRef="_nameItem"/>
+    <property id="description" itemSubjectRef="_descriptionItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_2" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <subProcess id="_6" name="Analyze market for the competition"  >
+    <!-- nodes -->
+    <startEvent id="_6-1" name="Start" />
+    <endEvent id="_6-2" name="End" />
+    <manualTask id="_6-3" name="Identify competition" >
+    </manualTask>
+    <userTask id="_6-4" name="Identify most favourite products" >
+      <ioSpecification>
+        <dataInput id="_6-4_TaskNameInput" name="TaskName" />
+        <dataInput id="_6-4_GroupIdInput" name="GroupId" />
+        <dataOutput id="_6-4_favouriteProductsOutput" name="favouriteProducts" />
+        <inputSet>
+          <dataInputRefs>_6-4_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_6-4_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_6-4_favouriteProductsOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_6-4_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Identify favourite product</from>
+          <to xsi:type="tFormalExpression">_6-4_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6-4_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_6-4_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_6-4_favouriteProductsOutput</sourceRef>
+        <targetRef>favouriteProducts</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <!-- connections -->
+    <sequenceFlow id="_6-4-_6-2" sourceRef="_6-4" targetRef="_6-2" />
+    <sequenceFlow id="_6-1-_6-3" sourceRef="_6-1" targetRef="_6-3" />
+    <sequenceFlow id="_6-3-_6-4" sourceRef="_6-3" targetRef="_6-4" />
+    </subProcess>
+    <userTask id="_7" name="Summarize the research" >
+      <ioSpecification>
+        <dataInput id="_7_favouriteProductsInput" name="favouriteProducts" />
+        <dataInput id="_7_needsInput" name="needs" />
+        <dataInput id="_7_TaskNameInput" name="TaskName" />
+        <dataInput id="_7_GroupIdInput" name="GroupId" />
+        <dataOutput id="_7_summaryOutput" name="summary" />
+        <inputSet>
+          <dataInputRefs>_7_favouriteProductsInput</dataInputRefs>
+          <dataInputRefs>_7_needsInput</dataInputRefs>
+          <dataInputRefs>_7_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_7_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_7_summaryOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>favouriteProducts</sourceRef>
+        <targetRef>_7_favouriteProductsInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>needs</sourceRef>
+        <targetRef>_7_needsInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_7_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Summarize research</from>
+          <to xsi:type="tFormalExpression">_7_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_7_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_7_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_7_summaryOutput</sourceRef>
+        <targetRef>summary</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <manualTask id="_8" name="Decide which product need to be added to our offer" >
+    </manualTask>
+    <userTask id="_9" name="Design new product" >
+      <ioSpecification>
+        <dataInput id="_9_summaryInput" name="summary" />
+        <dataInput id="_9_needsInput" name="needs" />
+        <dataInput id="_9_TaskNameInput" name="TaskName" />
+        <dataInput id="_9_GroupIdInput" name="GroupId" />
+        <dataOutput id="_9_descriptionOutput" name="description" />
+        <dataOutput id="_9_nameOutput" name="name" />
+        <inputSet>
+          <dataInputRefs>_9_summaryInput</dataInputRefs>
+          <dataInputRefs>_9_needsInput</dataInputRefs>
+          <dataInputRefs>_9_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_9_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_9_descriptionOutput</dataOutputRefs>
+          <dataOutputRefs>_9_nameOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>summary</sourceRef>
+        <targetRef>_9_summaryInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>needs</sourceRef>
+        <targetRef>_9_needsInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_9_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Design Product</from>
+          <to xsi:type="tFormalExpression">_9_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_9_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_9_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_9_descriptionOutput</sourceRef>
+        <targetRef>description</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_9_nameOutput</sourceRef>
+        <targetRef>name</targetRef>
+      </dataOutputAssociation>
+    </userTask>
+    <sendTask id="_11" name="Order products from supplier" messageRef="_11_Message" implementation="Other" >
+      <ioSpecification>
+        <dataInput id="_11_param" name="Message" />
+        <inputSet>
+          <dataInputRefs>_11_param</dataInputRefs>
+        </inputSet>
+        <outputSet/>
+      </ioSpecification>
+    </sendTask>
+    <sendTask id="_12" name="Reorder produts from supplier" messageRef="_12_Message" implementation="Other" >
+      <ioSpecification>
+        <dataInput id="_12_param" name="Message" />
+        <inputSet>
+          <dataInputRefs>_12_param</dataInputRefs>
+        </inputSet>
+        <outputSet/>
+      </ioSpecification>
+    </sendTask>
+    <manualTask id="_13" name="Obtain product from supplier" >
+    </manualTask>
+    <serviceTask id="_14" name="Add product to UniGift shops" operationRef="_14_ServiceOperation" implementation="Other" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("product", new Product(name, description));</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_14_param" name="Parameter" />
+        <dataOutput id="_14_result" name="Result" />
+        <inputSet>
+          <dataInputRefs>_14_param</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_14_result</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>product</sourceRef>
+        <targetRef>_14_param</targetRef>
+      </dataInputAssociation>
+    </serviceTask>
+    <userTask id="_15" name="Add product to UniGift portfolio" >
+      <ioSpecification>
+        <dataInput id="_15_productInput" name="product" />
+        <dataInput id="_15_TaskNameInput" name="TaskName" />
+        <dataInput id="_15_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_15_productInput</dataInputRefs>
+          <dataInputRefs>_15_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_15_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>product</sourceRef>
+        <targetRef>_15_productInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_15_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Add product</from>
+          <to xsi:type="tFormalExpression">_15_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_15_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_15_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </userTask>
+    <exclusiveGateway id="_17" name="Gateway" gatewayDirection="Converging" />
+    <intermediateCatchEvent id="_16" name="Signal" >
+      <signalEventDefinition signalRef="Timer"/>
+    </intermediateCatchEvent>
+    <parallelGateway id="_19" name="Gateway" gatewayDirection="Converging" />
+    <userTask id="_18" name="Identify customer needs" >
+      <ioSpecification>
+        <dataInput id="_18_CommentInput" name="Comment" />
+        <dataInput id="_18_SkippableInput" name="Skippable" />
+        <dataInput id="_18_LocaleInput" name="Locale" />
+        <dataInput id="_18_TaskNameInput" name="TaskName" />
+        <dataInput id="_18_GroupIdInput" name="GroupId" />
+        <dataInput id="_18_PriorityInput" name="Priority" />
+        <dataOutput id="_18_needsOutput" name="needs" />
+        <inputSet>
+          <dataInputRefs>_18_CommentInput</dataInputRefs>
+          <dataInputRefs>_18_SkippableInput</dataInputRefs>
+          <dataInputRefs>_18_LocaleInput</dataInputRefs>
+          <dataInputRefs>_18_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_18_GroupIdInput</dataInputRefs>
+          <dataInputRefs>_18_PriorityInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_18_needsOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_18_CommentInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_18_CommentInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_18_SkippableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_18_SkippableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_18_LocaleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">en-UK</from>
+          <to xsi:type="tFormalExpression">_18_LocaleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_18_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Identify needs</from>
+          <to xsi:type="tFormalExpression">_18_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_18_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_18_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_18_PriorityInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_18_PriorityInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_18_needsOutput</sourceRef>
+        <targetRef>needs</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression></formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <parallelGateway id="_20" name="Gateway" gatewayDirection="Diverging" />
+
+    <!-- connections -->
+    <sequenceFlow id="_15-_2" sourceRef="_15" targetRef="_2" />
+    <sequenceFlow id="_20-_6" sourceRef="_20" targetRef="_6" />
+    <sequenceFlow id="_19-_7" sourceRef="_19" targetRef="_7" />
+    <sequenceFlow id="_7-_8" sourceRef="_7" targetRef="_8" />
+    <sequenceFlow id="_8-_9" sourceRef="_8" targetRef="_9" />
+    <sequenceFlow id="_9-_11" sourceRef="_9" targetRef="_11" />
+    <sequenceFlow id="_16-_12" sourceRef="_16" targetRef="_12" />
+    <sequenceFlow id="_17-_13" sourceRef="_17" targetRef="_13" />
+    <sequenceFlow id="_13-_14" sourceRef="_13" targetRef="_14" />
+    <sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15" />
+    <sequenceFlow id="_12-_17" sourceRef="_12" targetRef="_17" />
+    <sequenceFlow id="_11-_17" sourceRef="_11" targetRef="_17" />
+    <sequenceFlow id="_18-_19" sourceRef="_18" targetRef="_19" />
+    <sequenceFlow id="_6-_19" sourceRef="_6" targetRef="_19" />
+    <sequenceFlow id="_20-_18" sourceRef="_20" targetRef="_18" />
+    <sequenceFlow id="_1-_20" sourceRef="_1" targetRef="_20" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="unigift-newproducts" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="16" y="82" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="1791" y="120" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="177" y="96" width="480" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6-1" >
+        <dc:Bounds x="205" y="156" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6-2" >
+        <dc:Bounds x="597" y="164" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6-3" >
+        <dc:Bounds x="289" y="160" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6-4" >
+        <dc:Bounds x="434" y="162" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="770" y="80" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="902" y="82" width="116" height="45" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="1050" y="80" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="1182" y="80" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="1236" y="216" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="1395" y="120" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="1527" y="120" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="1659" y="120" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="1314" y="120" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="1236" y="120" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="689" y="80" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="177" y="16" width="480" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="96" y="82" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_6-4-_6-2" >
+        <di:waypoint x="307" y="90" />
+        <di:waypoint x="444" y="92" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-1-_6-3" >
+        <di:waypoint x="52" y="84" />
+        <di:waypoint x="162" y="88" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-3-_6-4" >
+        <di:waypoint x="162" y="88" />
+        <di:waypoint x="307" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_2" >
+        <di:waypoint x="1709" y="144" />
+        <di:waypoint x="1815" y="144" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_6" >
+        <di:waypoint x="120" y="106" />
+        <di:waypoint x="417" y="171" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_7" >
+        <di:waypoint x="713" y="104" />
+        <di:waypoint x="820" y="104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_8" >
+        <di:waypoint x="820" y="104" />
+        <di:waypoint x="960" y="104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_9" >
+        <di:waypoint x="960" y="104" />
+        <di:waypoint x="1100" y="104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_11" >
+        <di:waypoint x="1100" y="104" />
+        <di:waypoint x="1232" y="104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16-_12" >
+        <di:waypoint x="1260" y="144" />
+        <di:waypoint x="1286" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_13" >
+        <di:waypoint x="1338" y="144" />
+        <di:waypoint x="1445" y="144" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_14" >
+        <di:waypoint x="1445" y="144" />
+        <di:waypoint x="1577" y="144" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_15" >
+        <di:waypoint x="1577" y="144" />
+        <di:waypoint x="1709" y="144" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_17" >
+        <di:waypoint x="1286" y="240" />
+        <di:waypoint x="1338" y="144" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_17" >
+        <di:waypoint x="1232" y="104" />
+        <di:waypoint x="1338" y="144" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_18-_19" >
+        <di:waypoint x="417" y="40" />
+        <di:waypoint x="713" y="104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_19" >
+        <di:waypoint x="417" y="171" />
+        <di:waypoint x="713" y="104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_18" >
+        <di:waypoint x="120" y="106" />
+        <di:waypoint x="417" y="40" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_20" >
+        <di:waypoint x="40" y="106" />
+        <di:waypoint x="120" y="106" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>
